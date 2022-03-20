@@ -29,7 +29,7 @@ a {
       rgba(0, 0, 0, 0.2),
       rgba(201, 117, 78, 0.3)
     ),
-    url(/images/K&J_091-Edit.jpg) center/cover;
+    url("/images/K&J_091-Edit.jpg") center/cover;
 }
 
 .header {
@@ -62,7 +62,7 @@ h1 {
   letter-spacing: 5px;
   font-style: normal;
   &::after {
-    content: url(/images/ornamen-18.svg);
+    content: url("/images/ornamen-18.svg");
     display: block;
     line-height: 20px;
   }
