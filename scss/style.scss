@@ -29,7 +29,7 @@ a {
       rgba(0, 0, 0, 0.2),
       rgba(201, 117, 78, 0.3)
     ),
-    url("/images/K&J_091-Edit.jpg") center/cover;
+    url("./images/K&J_091-Edit.jpg") center/cover;
 }
 
 .header {
@@ -62,7 +62,7 @@ h1 {
   letter-spacing: 5px;
   font-style: normal;
   &::after {
-    content: url("/images/ornamen-18.svg");
+    content: url("./images/ornamen-18.svg");
     display: block;
     line-height: 20px;
   }
@@ -128,7 +128,7 @@ h2 {
   letter-spacing: 5px;
   font-family: "Cormorant Garamond", serif;
   &::after {
-    content: url(/images/ornament-dark.svg);
+    content: url(./images/ornament-dark.svg);
     display: block;
     line-height: 20px;
   }
@@ -160,7 +160,7 @@ iframe {
   background-color: #f4f0ed;
   h2::after {
     content: "";
-    background: url(/images/divider2.svg);
+    background: url(./images/divider2.svg);
     width: 600px;
     height: 80px;
     background-size:600px 80px;
@@ -202,7 +202,7 @@ iframe {
 
 .info {
   background-color: #f4f0ed;
-  background: url(/images/leaf-ornament.png);
+  background: url(./images/leaf-ornament.png);
   background-position: bottom center;
   background-repeat: no-repeat;
   padding-bottom: 100px;
@@ -246,7 +246,7 @@ iframe {
   }
 }
 .form {
-  background: url(/images/bg.jpg) center/cover;
+  background: url(./images/bg.jpg) center/cover;
   text-align: center;
   &__text {
     max-width: 70%;
@@ -282,7 +282,7 @@ iframe {
   }
   h2::after {
     content: "";
-    background: url(/images/divider.svg);
+    background: url(./images/divider.svg);
     width: 600px;
     height: 80px;
     background-size:600px 80px;
