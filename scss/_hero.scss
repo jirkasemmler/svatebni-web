@@ -1,0 +1,34 @@
+@use "variables";
+
+.hero {
+  margin: 0;
+  color: variables.$main-bg;
+  min-height: 800px;
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.2),
+      rgba(201, 117, 78, 0.3)
+    ),
+    url(/images/K&J_091-Edit.jpg) center/cover;
+}
+
+.header {
+  text-align: center;
+  font-style: italic;
+  font-size: 26px;
+  letter-spacing: 2px;
+  &__date {
+    font-family: variables.$font-btn;
+    background-color: variables.$special;
+    font-style: normal;
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 12px;
+    letter-spacing: 3px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+  }
+}
+
+
+

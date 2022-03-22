@@ -1,0 +1,50 @@
+@use "variables";
+
+.logo {
+  min-width: 200px;
+  &__content {
+    font-family: "Fuggles", cursive;
+    color: white;
+    margin: 0;
+    font-size: 40px;
+    &--reverse {
+      color: #3b3838;
+      font-size: 70px;
+    }
+  }
+}
+
+.nav {
+  text-align: center;
+  margin: 0;
+  @media screen and (min-width: 1000px) {
+    display: flex;
+    justify-content: space-between;
+  }
+  .menu {
+    &__list {
+      list-style: none;
+      padding: 0;
+      @media screen and (min-width: 1000px) {
+        display: flex;
+        justify-content: space-around;
+      }
+    }
+    &__item {
+      a {
+        margin: 10px;
+        padding: 10px 10px 0 0;
+        color: variables.$main-bg;
+        text-decoration: none;
+        font-family: variables.$font-btn;
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 12px;
+        letter-spacing: 3px;
+        &:hover {
+          border-bottom: 1px solid #e4bd48;
+        }
+      }
+    }
+  }
+}

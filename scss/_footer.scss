@@ -1,0 +1,25 @@
+@use "variables";
+
+.footer {
+  margin-top: 100px;
+  text-align: center;
+  &__menu {
+    .menu__list {
+      margin-top: 100px;
+      list-style: none;
+      padding: 0;
+      @media screen and (min-width: 800px) {
+        display: flex;
+        justify-content: space-around;
+      }
+    }
+    .menu__item a {
+      color: variables.$special;
+      text-decoration: none;
+      font-family: muli, sans-serif;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 13px;
+    }
+  }
+}

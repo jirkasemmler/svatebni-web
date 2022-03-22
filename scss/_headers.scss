@@ -1,0 +1,66 @@
+@use "variables";
+
+h1 {
+  font-family: variables.$font-h1;
+  text-transform: uppercase;
+  font-size: 80px;
+  font-weight: 300;
+  margin: 0;
+  padding-top: 350px;
+  color: variables.$main-bg;
+  letter-spacing: 5px;
+  font-style: normal;
+  &::after {
+    content: url("/images/ornamen-18.svg");
+    display: block;
+    line-height: 20px;
+  }
+}
+
+
+
+h2 {
+  color: variables.$header-color;
+  padding-top: 100px;
+  margin-top: 0;
+  text-align: center;
+  font-size: 48px;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 5px;
+  &::after {
+    content: url(/images/ornament-dark.svg);
+    display: block;
+    line-height: 20px;
+  }
+}
+
+h3 {
+  color: variables.$header-color;
+  font-family: variables.$font-main;
+}
+
+.contacts {
+  h2::after {
+    content: "";
+    background: url(/images/divider2.svg);
+    width: 50%;
+    height: 80px;
+    background-size: 100% 100%;
+    display: block;
+    margin: auto;
+  }
+}
+
+.story {
+  h2::after {
+    content: "";
+    background: url(/images/divider.svg);
+    width: 50%;
+    height: 80px;
+    background-size:100% 100%;
+    display: block;
+    margin: auto;
+  }
+}
+

@@ -1,3 +1,13 @@
+@use "variables";
+@use "hero";
+@use "nav";
+@use "program";
+@use "footer";
+@use "headers";
+
+
+
+
 * {
   box-sizing: border-box;
 }
@@ -7,140 +17,23 @@ html {
 }
 
 body {
-  font-family: "EB Garamond", serif;
+  font-family: variables.$font-main;
   background-color: white;
   margin: 0;
   padding: 0;
-  color: #9b9b9b;
+  color: variables.$main-color;
   font-size: 18px;
   font-weight: 300;
 }
 
 a {
-  color: #d1a545;
+  color: variables.$special;
 }
 
-.hero {
-  margin: 0;
-  color: white;
-  min-height: 800px;
-  background: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.2),
-      rgba(201, 117, 78, 0.3)
-    ),
-    url("./images/K&J_091-Edit.jpg") center/cover;
-}
 
-.header {
-  text-align: center;
-  font-style: italic;
-  font-size: 26px;
-  font-family: "EB Garamond", serif;
-  letter-spacing: 2px;
-  &__date {
-    font-family: "Montserrat", sans-serif;
-    background-color: #d1a545;
-    font-style: normal;
-    display: inline-block;
-    padding: 15px 30px;
-    font-size: 12px;
-    letter-spacing: 3px;
-    margin-top: 50px;
-    margin-bottom: 100px;
-  }
-}
-
-h1 {
-  font-family: "Cormorant Garamond", serif;
-  text-transform: uppercase;
-  font-size: 80px;
-  font-weight: 300;
-  margin: 0;
-  padding-top: 350px;
-  color: white;
-  letter-spacing: 5px;
-  font-style: normal;
-  &::after {
-    content: url("./images/ornamen-18.svg");
-    display: block;
-    line-height: 20px;
-  }
-}
-
-.logo {
-  min-width: 200px;
-  &__content {
-    font-family: "Fuggles", cursive;
-    color: white;
-    margin: 0;
-    font-size: 40px;
-    &--reverse {
-      color: #3b3838;
-      font-size: 70px;
-    }
-  }
-}
-
-.nav {
-  text-align: center;
-  margin: 0;
-  @media screen and (min-width: 600px) {
-    display: flex;
-    justify-content: space-between;
-  }
-  .menu {
-    &__list {
-      list-style: none;
-      padding: 0;
-      @media screen and (min-width: 600px) {
-        display: flex;
-        justify-content: space-around;
-      }
-    }
-    &__item {
-      a {
-        margin: 20px;
-        padding: 10px 20px 0 0;
-        color: #ffffff;
-        text-decoration: none;
-        font-family: "Montserrat", sans-serif;
-        text-transform: uppercase;
-        font-weight: 500;
-        font-size: 12px;
-        letter-spacing: 3px;
-        &:hover {
-          border-bottom: 1px solid #e4bd48;
-        }
-      }
-    }
-  }
-}
-
-h2 {
-  color: #4d504a;
-  padding-top: 100px;
-  margin-top: 0;
-  text-align: center;
-  font-size: 48px;
-  text-transform: uppercase;
-  font-weight: 400;
-  letter-spacing: 5px;
-  font-family: "Cormorant Garamond", serif;
-  &::after {
-    content: url(./images/ornament-dark.svg);
-    display: block;
-    line-height: 20px;
-  }
-}
-
-h3 {
-  color: #4d504a;
-  font-family: "EB Garamond", serif;
-}
 
 .place {
-  color: #9b9b9b;
+  color: variables.$main-color;
   text-align: center;
   &__text {
     font-style: italic;
@@ -156,17 +49,10 @@ iframe {
   display: block;
 }
 
+
+
 .contacts {
-  background-color: #f4f0ed;
-  h2::after {
-    content: "";
-    background: url(./images/divider2.svg);
-    width: 600px;
-    height: 80px;
-    background-size:600px 80px;
-    display: block;
-    margin: auto;
-  }
+  background-color: variables.$dark-bg;
   &__box {
     width: 80%;
     padding-bottom: 180px;
@@ -191,7 +77,6 @@ iframe {
     display: block;
   }
 }
-
 .card {
   text-align: center;
   &__foto {
@@ -200,11 +85,14 @@ iframe {
   }
 }
 
+
+
 .info {
-  background-color: #f4f0ed;
-  background: url(./images/leaf-ornament.png);
+  background-color: variables.$dark-bg;
+  background: url(/images/leaf-ornament.png);
   background-position: bottom center;
   background-repeat: no-repeat;
+  background-size: 100%;
   padding-bottom: 100px;
   &__box {
     max-width: 85%;
@@ -214,11 +102,10 @@ iframe {
     gap: 30px;
   }
 }
-
 .box {
   position: relative;
   text-align: center;
-  border: 3px double #e4bd48;
+  border: 3px double variables.$special;
   padding: 20px;
   &__icon {
     position: absolute;
@@ -226,15 +113,18 @@ iframe {
     left: 0;
     right: 0;
     margin: auto;
-    fill: #ffffff;
-    background-color: #e4bd48;
+    fill: variables.$main-bg;
+    background-color: variables.$special;
     border-radius: 50%;
     padding: 5px;
     width: 50px;
   }
 }
+
+
+
 .gallery {
-  background-color: #f4f0ed;
+  background-color: variables.$dark-bg;
   &__grid {
     padding: 50px;
     display: grid;
@@ -245,8 +135,11 @@ iframe {
     }
   }
 }
+
+
+
 .form {
-  background: url(./images/bg.jpg) center/cover;
+  background: url(/images/bg.jpg) center/cover;
   text-align: center;
   &__text {
     max-width: 70%;
@@ -254,9 +147,9 @@ iframe {
   }
   &__button {
     display: inline-block;
-    background-color: #e4bd48;
-    color: white;
-    font-family: "Montserrat", sans-serif;
+    background-color: variables.$special;
+    color: variables.$main-bg;
+    font-family: variables.$font-btn;
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 3px;
@@ -265,6 +158,8 @@ iframe {
   }
 }
 
+
+
 .accom {
   text-align: center;
   max-width: 85%;
@@ -272,148 +167,17 @@ iframe {
   padding-bottom: 100px;
 }
 
+
+
 .story {
   padding-bottom: 100px;
   text-align: center;
-  background-color: #f4f0ed;
+  background-color: variables.$dark-bg;
   p {
     max-width: 85%;
     margin: auto;
   }
-  h2::after {
-    content: "";
-    background: url(./images/divider.svg);
-    width: 600px;
-    height: 80px;
-    background-size:600px 80px;
-    display: block;
-    margin: auto;
-  }
 }
 
-.footer {
-  margin-top: 100px;
-  text-align: center;
-  &__menu {
-    .menu__list {
-      margin-top: 100px;
-      list-style: none;
-      padding: 0;
-      @media screen and (min-width: 800px) {
-        display: flex;
-        justify-content: space-around;
-      }
-    }
-    .menu__item a {
-      color: #e4bd48;
-      text-decoration: none;
-      font-family: muli, sans-serif;
-      text-transform: uppercase;
-      font-weight: bold;
-      font-size: 13px;
-    }
-  }
-}
 
-.program {
-  @media screen and (min-width: 800px) {
-    margin: -100px auto 0 auto;
-    position: relative;
-    z-index: 1;
-    background-color: #ffffff;
-    width: 90%;
-  }
-}
 
-.timeline {
-  padding: 50px;
-  position: relative;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-column-gap: 60px;
-  grid-template-rows: auto;
-  grid-template-areas: 
-    "first ."
-    ". second"
-    "third ."
-    ". fourth"
-    "fifth .";
-  &__item {
-    position: relative;
-    padding: 0 20px;
-    background-color: #f4f0ed;
-    border-radius: 20px;
-    &:nth-of-type(even) {
-      text-align: left;
-      &::after {
-        content: "";
-        background-color: #e4bd48;
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        position: absolute;
-        top: calc(50% - 5px);
-        left: -34px;
-      }
-      &::before {
-        content: "";
-        width: 30px;
-        height: 1px;
-        background-color: #e4bd48;
-        position: absolute;
-        top: calc(50% - 1px);
-        left: -30px;
-      }
-    }
-    &:nth-of-type(odd) {
-      text-align: right;
-      &::after {
-        content: "";
-        background-color: #e4bd48;
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        position: absolute;
-        top: calc(50% - 5px);
-        right: -36px;
-      }
-      &::before {
-        content: "";
-        width: 30px;
-        height: 1px;
-        background-color: #e4bd48;
-        position: absolute;
-        top: calc(50% - 1px);
-        right: -30px;
-      }
-    }
-    h3 {
-      font-style: italic;
-    }
-  }
-  &::before {
-    content: "";
-    background-color: #e4bd48;
-    width: 2px;
-    height: 100%;
-    position: absolute;
-    margin: auto;
-    left: 50%;
-    border-radius: 3px;
-  }
-}
-.first {
-  grid-area: first;
-}
-.second {
-  grid-area: second;
-}
-.third {
-  grid-area: third;
-}
-.fourth {
-  grid-area: fourth;
-}
-.fifth {
-  grid-area: fifth;
-}
