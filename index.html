@@ -41,7 +41,6 @@
       </nav>
       <header class="header">
         <h1>Jirka & Kika</h1>
-        <!--     <img src="images/ornamen-18.svg" alt="ornament"> -->
         <p class="header__place">Dvůr Honětice</p>
         <p class="header__date">9. září 2022 10:00</p>
       </header>
@@ -365,14 +364,21 @@
       </div>
     </section>
     <section class="gallery">
-      <div class="gallery__grid">
-        <img src="images/1.jpg" alt="foto 1" />
-        <img src="images/2.jpg" alt="foto 2" />
-        <img src="images/3.jpg" alt="foto 3" />
-        <img src="images/4.jpg" alt="foto 4" />
-        <img src="images/5.jpg" alt="foto 5" />
-        <img src="images/6.jpg" alt="foto 6" />
-        <img src="images/7.jpg" alt="foto 7" />
+      <div class="grid" data-colcade="columns: .grid-col, items: .grid-item">
+        <!-- columns -->
+        <div class="grid-col grid-col--1"></div>
+        <div class="grid-col grid-col--2"></div>
+        <div class="grid-col grid-col--3"></div>
+        <div class="grid-col grid-col--4"></div>
+        <!-- items -->
+
+        <div class="grid-item"><img class="img-1" src="images/1.jpg" alt="foto 1" /></div>
+        <div class="grid-item"><img class="img-3" src="images/4.jpg" alt="foto 4" /></div>
+        <div class="grid-item"><img class="img-4" src="images/3.jpg" alt="foto 3" /></div>
+        <div class="grid-item"><img class="img-5" src="images/6.jpg" alt="foto 6" /></div>
+        <div class="grid-item"><img class="img-6" src="images/7.jpg" alt="foto 7" /></div>
+        <div class="grid-item"><img class="img-7" src="images/5.jpg" alt="foto 5" /></div>
+        ...
       </div>
     </section>
     <section class="form" id="form">
@@ -450,5 +456,6 @@
         </ul>
       </div>
     </footer>
+    <script src="colcade.js"></script>
   </body>
 </html>
