@@ -369,16 +369,13 @@
         <div class="grid-col grid-col--1"></div>
         <div class="grid-col grid-col--2"></div>
         <div class="grid-col grid-col--3"></div>
-        <div class="grid-col grid-col--4"></div>
         <!-- items -->
-
         <div class="grid-item"><img class="img-1" src="images/1.jpg" alt="foto 1" /></div>
         <div class="grid-item"><img class="img-3" src="images/4.jpg" alt="foto 4" /></div>
         <div class="grid-item"><img class="img-4" src="images/3.jpg" alt="foto 3" /></div>
         <div class="grid-item"><img class="img-5" src="images/6.jpg" alt="foto 6" /></div>
         <div class="grid-item"><img class="img-6" src="images/7.jpg" alt="foto 7" /></div>
         <div class="grid-item"><img class="img-7" src="images/5.jpg" alt="foto 5" /></div>
-        ...
       </div>
     </section>
     <section class="form" id="form">
@@ -456,6 +453,12 @@
         </ul>
       </div>
     </footer>
-    <script src="colcade.js"></script>
+    <script src="https://unpkg.com/colcade@0/colcade.js"></script>
+    <script>
+      var colc = new Colcade( '.grid', {
+        columns: '.grid-col',
+        items: '.grid-item'
+      });
+    </script>
   </body>
 </html>

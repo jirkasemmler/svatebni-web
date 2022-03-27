@@ -434,39 +434,40 @@ iframe {
   margin: 130px;
 }
 
-/* with flexbox */
 .grid {
   display: flex;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.grid-item {
+  overflow: hidden;
+  margin: 10px 0;
+}
+.grid-item img {
+  width: 100%;
+  display: block;
+}
+.grid-item img:hover {
+  transform: scale(1.6);
 }
 
 .grid-col {
-  flex-grow: 1;
+  flex: 1;
+  padding: 5px;
 }
 
-.grid-item img {
-  width: 100%;
-}
-
-/* 2 columns by default, hide columns 2 & 3 */
 .grid-col--2, .grid-col--3 {
   display: none;
 }
 
-/* 3 columns at medium size */
-@media (min-width: 768px) {
-  .grid-col--2 {
+/* 3 columns at medium and large size */
+@media screen and (min-width: 768px) {
+  .grid-col--2, .grid-col--3 {
     display: block;
   }
 
-  /* show column 2 */
-}
-/* 4 columns at large size */
-@media (min-width: 1080px) {
-  .grid-col--3 {
-    display: block;
-  }
-
-  /* show column 3 */
+  /* show column 2 and 3 */
 }
 .accom {
   text-align: center;
