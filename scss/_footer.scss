@@ -4,22 +4,26 @@
   margin-top: 100px;
   text-align: center;
   &__menu {
-    .menu__list {
+    .menu {
       margin-top: 100px;
       list-style: none;
       padding: 0;
-      @media screen and (min-width: 800px) {
+      @media screen and (min-width: 650px) {
         display: flex;
         justify-content: space-around;
       }
     }
+
     .menu__item a {
       color: variables.$special;
       text-decoration: none;
       font-family: variables.$font-btn;
+      font-style: normal;
       text-transform: uppercase;
       font-weight: bold;
       font-size: 13px;
+      display: block;
+      text-align: center;
     }
   }
 }
