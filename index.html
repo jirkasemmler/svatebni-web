@@ -27,16 +27,19 @@
         <div class="logo">
           <p class="logo__content">Jirka & Kika</p>
         </div>
-        <div class="menu">
-          <ul class="menu__list">
-            <li class="menu__item"><a href="#place">Místo</a></li>
-            <li class="menu__item"><a href="#program">Program</a></li>
-            <li class="menu__item"><a href="#contacts">Kontakty</a></li>
-            <li class="menu__item"><a href="#info">Informace</a></li>
-            <li class="menu__item"><a href="#form">Formulář</a></li>
-            <li class="menu__item"><a href="#accom">Ubytování</a></li>
-            <li class="menu__item"><a href="#story">Příběh</a></li>
-          </ul>
+        <ul class="menu__list">
+          <li class="menu__item"><a class="menu__link" href="#place">Místo</a></li>
+          <li class="menu__item"><a class="menu__link" href="#program">Program</a></li>
+          <li class="menu__item"><a class="menu__link" href="#contacts">Kontakty</a></li>
+          <li class="menu__item"><a class="menu__link" href="#info">Informace</a></li>
+          <li class="menu__item"><a class="menu__link" href="#form">Formulář</a></li>
+          <li class="menu__item"><a class="menu__link" href="#accom">Ubytování</a></li>
+          <li class="menu__item"><a class="menu__link" href="#story">Příběh</a></li>
+        </ul>
+        <div class="hamburger">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
         </div>
       </nav>
       <header class="header">
@@ -454,6 +457,7 @@
         </ul>
       </div>
     </footer>
+    <script src="main.js"></script>
     <script src="https://unpkg.com/colcade@0/colcade.js"></script>
     <script>
       var colc = new Colcade( '.grid', {

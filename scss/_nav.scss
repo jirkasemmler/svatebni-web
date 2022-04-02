@@ -1,7 +1,18 @@
 @use "variables";
 
+
+
+.nav {
+  text-align: center;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .logo {
   min-width: 200px;
+  flex: 0 1 20%;
   &__content {
     font-family: "Fuggles", cursive;
     color: white;
@@ -14,37 +25,84 @@
   }
 }
 
-.nav {
-  text-align: center;
-  margin: 0;
-  @media screen and (min-width: 1000px) {
+.menu {
+  &__list {
+    list-style: none;
+    padding: 0;
+    top: -100%;
+    position: absolute;
+    margin-top: 70px;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
-  }
-  .menu {
-    &__list {
-      list-style: none;
-      padding: 0;
-      @media screen and (min-width: 1000px) {
-        display: flex;
-        justify-content: space-around;
-      }
+    flex: 1 0 80%;
+    flex-direction: column;
+    background-color: rgba(225, 225, 225, 0.6);
+    transition: top 1s ease-out;
+    @media screen and (min-width: 1000px) {
+      margin-top: 0;
+      position: static;
+      flex-direction: row;
+      justify-content: space-around;
+      background-color: transparent;
     }
-    &__item {
-      a {
+  }
+  &__item {
+    text-align: left;
+    a {
+      color: variables.$header-color;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-style: italic;
+      line-height: 2;
+      padding-left: 20px;
+      @media screen and (min-width: 1000px) {
         margin: 10px;
         padding: 10px 10px 0 0;
         color: variables.$main-bg;
-        text-decoration: none;
         font-family: variables.$font-btn;
-        text-transform: uppercase;
+        font-style: normal;
         font-weight: 500;
         font-size: 12px;
         letter-spacing: 3px;
+        display: block;
         &:hover {
           border-bottom: 1px solid #e4bd48;
         }
       }
+
     }
   }
+}
+
+.hamburger {
+  margin: 20px;
+  padding: 4px;
+  justify-self: right;
+  cursor: pointer;
+  background-color: variables.$special;
+  @media screen and (min-width: 1000px) {
+    display: none;
+  }
+
+}
+.bar1, .bar2, .bar3 {
+  width: 25px;
+  height: 3px;
+  background-color: variables.$main-bg;
+  margin: 5px 5px;
+  transition: 0.4s;
+  border-radius: 4px;
+}
+.change .bar1 {
+  transform: rotate(-45deg) translate(-5px, 7px) ;
+}
+.change .bar2 {
+  opacity: 0;
+}
+.change .bar3 {
+  transform: rotate(45deg) translate(-3px, -7px) ;
+}
+
+.active {
+  top: 0;
 }
