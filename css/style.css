@@ -70,6 +70,7 @@
 }
 .menu__item {
   text-align: left;
+  position: relative;
 }
 .menu__item a {
   color: #4d504a;
@@ -91,9 +92,20 @@
     letter-spacing: 3px;
     display: block;
   }
-  .menu__item a:hover {
-    border-bottom: 1px solid #e4bd48;
+  .menu__item a::after {
+    content: "";
+    position: absolute;
+    top: 50px;
+    right: -100%;
+    width: 100%;
+    height: 1px;
+    background-color: transparent;
+    transition: right 0.5s ease;
   }
+}
+.menu__item:hover a:after {
+  right: 0;
+  background-color: #d1a545;
 }
 
 .hamburger {
@@ -287,6 +299,9 @@
   display: block;
   text-align: center;
 }
+.footer__menu .menu__item a:hover {
+  border: none;
+}
 
 h1 {
   font-family: "Cormorant Garamond", serif;
@@ -425,6 +440,10 @@ a {
   color: #d1a545;
 }
 
+section {
+  min-height: 100vh;
+}
+
 .reveal {
   position: relative;
   transform: translateY(150px);
@@ -528,6 +547,7 @@ iframe {
 .form__text {
   max-width: 70%;
   margin: auto;
+  padding-top: 50px;
 }
 .form__button {
   display: inline-block;
@@ -538,7 +558,7 @@ iframe {
   text-transform: uppercase;
   letter-spacing: 3px;
   padding: 10px;
-  margin: 130px;
+  margin: 200px;
 }
 
 .accom {

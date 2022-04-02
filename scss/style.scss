@@ -30,6 +30,10 @@ a {
   color: variables.$special;
 }
 
+section {
+  min-height: 100vh;
+}
+
 .reveal {
   position: relative;
   transform: translateY(150px);
@@ -137,6 +141,7 @@ iframe {
   &__text {
     max-width: 70%;
     margin: auto;
+    padding-top: 50px;
   }
   &__button {
     display: inline-block;
@@ -147,7 +152,7 @@ iframe {
     text-transform: uppercase;
     letter-spacing: 3px;
     padding: 10px;
-    margin: 130px;
+    margin: 200px;
   }
 }
 
