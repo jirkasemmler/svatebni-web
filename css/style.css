@@ -1,7 +1,7 @@
 .hero {
   margin: 0;
   color: #ffffff;
-  min-height: 800px;
+  min-height: 100vh;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(201, 117, 78, 0.3)), url(/images/K&J_091-Edit.jpg) center/cover;
 }
 
@@ -56,7 +56,7 @@
   display: flex;
   flex: 1 0 80%;
   flex-direction: column;
-  background-color: rgba(225, 225, 225, 0.6);
+  background-color: rgba(225, 225, 225, 0.8);
   transition: top 1s ease-out;
 }
 @media screen and (min-width: 1000px) {
@@ -76,7 +76,7 @@
   text-decoration: none;
   text-transform: uppercase;
   font-style: italic;
-  line-height: 2;
+  line-height: 2.5;
   padding-left: 20px;
 }
 @media screen and (min-width: 1000px) {
@@ -265,13 +265,13 @@
   margin-top: 100px;
   text-align: center;
 }
-.footer__menu .menu__list {
+.footer__menu .menu {
   margin-top: 100px;
   list-style: none;
   padding: 0;
 }
-@media screen and (min-width: 800px) {
-  .footer__menu .menu__list {
+@media screen and (min-width: 650px) {
+  .footer__menu .menu {
     display: flex;
     justify-content: space-around;
   }
@@ -280,9 +280,12 @@
   color: #d1a545;
   text-decoration: none;
   font-family: "Montserrat", sans-serif;
+  font-style: normal;
   text-transform: uppercase;
   font-weight: bold;
   font-size: 13px;
+  display: block;
+  text-align: center;
 }
 
 h1 {
@@ -420,6 +423,18 @@ body {
 
 a {
   color: #d1a545;
+}
+
+.reveal {
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: all 2s ease;
+}
+
+.reveal.reveal--active {
+  transform: translateY(0);
+  opacity: 1;
 }
 
 .place {
