@@ -558,7 +558,7 @@ iframe {
   text-transform: uppercase;
   letter-spacing: 3px;
   padding: 10px;
-  margin: 200px;
+  margin: 200px auto;
 }
 
 .accom {
