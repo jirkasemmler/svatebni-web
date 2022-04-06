@@ -30,15 +30,15 @@ a {
   color: variables.$special;
 }
 
-section {
-  min-height: 100vh;
+section:nth-of-type(even) {
+  background-color: variables.$dark-bg;
 }
 
 .reveal {
   position: relative;
   transform: translateY(150px);
   opacity: 0;
-  transition: all 2s ease;
+  transition: all 1.3s ease;
 }
 
 .reveal.reveal--active {
@@ -55,18 +55,23 @@ section {
     max-width: 85%;
     margin: auto;
   }
+  &__image {
+    width: 100%;
+    display: block;
+  }
 }
 
 iframe {
   margin: 0;
   padding: 0;
   display: block;
+  filter: grayscale(0.8);
+  opacity: 0.8;
 }
 
 
 
 .contacts {
-  background-color: variables.$dark-bg;
   &__box {
     width: 80%;
     padding-bottom: 180px;
@@ -102,7 +107,6 @@ iframe {
 
 
 .info {
-  background-color: variables.$dark-bg;
   background: url(/images/leaf-ornament.png);
   background-position: bottom center;
   background-repeat: no-repeat;
@@ -136,10 +140,24 @@ iframe {
 }
 
 .form {
-  background: url(/images/bg.jpg) center/cover;
-  text-align: center;
+  @media screen and (min-width: 800px) {
+    display: flex;
+  }
+  &__img {
+    flex: 0 1 50%;
+    margin: 40px;
+    & img {
+      width: 100%;
+    }
+  }
+  &__container {
+    flex: 1 0 50%;
+    text-align: center;
+    p {
+      max-width: 85%;
+    }
+  }
   &__text {
-    max-width: 70%;
     margin: auto;
     padding-top: 50px;
   }
@@ -153,23 +171,23 @@ iframe {
     letter-spacing: 3px;
     padding: 10px;
     margin: 200px auto;
+
   }
 }
 
-
 .accom {
+  clear: both;
   text-align: center;
-  max-width: 85%;
-  margin: auto;
   padding-bottom: 100px;
+  p {
+    max-width: 85%;
+    margin: auto;
+  }
 }
-
-
 
 .story {
   padding-bottom: 100px;
   text-align: center;
-  background-color: variables.$dark-bg;
   p {
     max-width: 85%;
     margin: auto;

@@ -14,25 +14,26 @@
 .timeline {
   padding: 50px;
   position: relative;
-  @media screen and (min-width: 650px) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 60px;
-    grid-template-rows: auto;
-    grid-template-areas: 
-    "first ."
-    ". second"
-    "third ."
-    ". fourth"
-    "fifth .";
-  }
+  display: inline-block;
   &__item {
-    position: relative;
-    padding: 0 20px;
+    padding: 10px 20px;
     background-color: variables.$dark-bg;
     border-radius: 20px;
+    margin-bottom: 20px;
+    @media screen and (min-width: 650px) {
+      max-width: calc(50% - 30px);
+      clear: both;
+    }
+    &:not(:first-child) {
+      @media screen and (min-width: 650px) {
+        margin-top: -80px;
+      }
+    }
     &:nth-of-type(even) {
-      text-align: left;
+      @media screen and (min-width: 650px) {
+        float: right;
+        text-align: left;
+      }
       &::after {
         content: "";
         background-color: variables.$special;
@@ -55,6 +56,7 @@
     }
     &:nth-of-type(odd) {
       @media screen and (min-width: 650px) {
+        float: left;
         text-align: right;
       }
       &::after {
@@ -93,29 +95,14 @@
     content: "";
     background-color: variables.$special;
     width: 2px;
-    height: 90%;
     position: absolute;
-    margin: auto;
+    margin: 0 auto;
     border-radius: 10px;
     left: 20px;
+    height: 90%;
     @media screen and (min-width: 650px) {
       left: 50%;
-      height: 97%;
-    }
+     }
   }
-}
-.first {
-  grid-area: first;
-}
-.second {
-  grid-area: second;
-}
-.third {
-  grid-area: third;
-}
-.fourth {
-  grid-area: fourth;
-}
-.fifth {
-  grid-area: fifth;
+
 }

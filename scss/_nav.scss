@@ -42,13 +42,27 @@
       margin-top: 0;
       position: static;
       flex-direction: row;
-      justify-content: space-around;
+      justify-content: flex-end;
       background-color: transparent;
     }
   }
   &__item {
     text-align: left;
     position: relative;
+    @media screen and (min-width: 1000px) {
+      margin: 10px 20px 0 10px;
+      &:last-of-type a {
+        border: 1px solid variables.$special;
+        padding: 0 10px;
+        &:hover {
+          background-color: variables.$special;
+          color: variables.$main-bg;
+        }
+        &::after {
+          content: none;
+        }
+      }
+    }
     a {
       color: variables.$header-color;
       text-decoration: none;
@@ -56,10 +70,7 @@
       font-style: italic;
       line-height: 2.5;
       padding-left: 20px;
-
       @media screen and (min-width: 1000px) {
-        margin: 10px;
-        padding: 10px 10px 0 0;
         color: variables.$main-bg;
         font-family: variables.$font-btn;
         font-style: normal;
@@ -67,15 +78,17 @@
         font-size: 12px;
         letter-spacing: 3px;
         display: block;
+        padding: 0;
         &::after {
           content: "";
           position: absolute;
-          top: 50px;
-          right: -100%;
+          top: 25px;
           width: 100%;
+          right: -20%;
           height: 1px;
           background-color: transparent;
           transition: right 0.5s ease;
+          overflow: hidden;
         }
       }
     }
