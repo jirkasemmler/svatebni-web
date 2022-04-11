@@ -4,7 +4,6 @@
 @use "program";
 @use "footer";
 @use "headers";
-@use "gallery";
 
 
 
@@ -32,6 +31,9 @@ a {
 
 section:nth-of-type(even) {
   background-color: variables.$dark-bg;
+  &:nth-of-type(4) {
+    background: none; 
+  }
 }
 
 .reveal {
@@ -91,9 +93,16 @@ iframe {
     position: relative;
     z-index: -1;
     width: 100%;
-    height: 600px;
+    height: 400px; 
     object-fit: cover;
+    object-position: bottom;
     display: block;
+     @media screen and (min-width: 1000px) {
+      height: 500px;
+    }
+    @media screen and (min-width: 1400px) {
+      height: 800px;
+    }
   }
 }
 .card {
@@ -145,7 +154,7 @@ iframe {
   }
   &__img {
     flex: 0 1 50%;
-    margin: 40px;
+    margin: 20px;
     & img {
       width: 100%;
     }
@@ -170,18 +179,7 @@ iframe {
     text-transform: uppercase;
     letter-spacing: 3px;
     padding: 10px;
-    margin: 200px auto;
-
-  }
-}
-
-.accom {
-  clear: both;
-  text-align: center;
-  padding-bottom: 100px;
-  p {
-    max-width: 85%;
-    margin: auto;
+    margin: 100px auto 0 auto;
   }
 }
 
@@ -191,6 +189,9 @@ iframe {
   p {
     max-width: 85%;
     margin: auto;
+    @media screen and (min-width: 1000px) {
+      max-width: 60%;
+    }
   }
 }
 
