@@ -21,8 +21,10 @@
     border-radius: 20px;
     margin-bottom: 20px;
     @media screen and (min-width: 650px) {
-      max-width: calc(50% - 30px);
+      width: calc(50% - 30px);
       clear: both;
+      min-height: 160px;
+
     }
     &:not(:first-child) {
       @media screen and (min-width: 650px) {
@@ -99,7 +101,7 @@
     margin: 0 auto;
     border-radius: 10px;
     left: 20px;
-    height: 90%;
+    height: 93%;
     @media screen and (min-width: 650px) {
       left: 50%;
      }

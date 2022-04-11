@@ -3,30 +3,31 @@
 .hero {
   margin: 0;
   color: variables.$main-bg;
-  min-height: 100vh;
+
   background: linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0.2),
       rgba(201, 117, 78, 0.3)
     ),
     url(/images/K&J_091-Edit.jpg) center/cover;
+
 }
 
 .header {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   text-align: center;
   font-style: italic;
-  font-size: 40px;
+  font-size: 30px;
   letter-spacing: 2px;
-  &__date {
-    font-family: variables.$font-btn;
-    background-color: variables.$special;
-    font-style: normal;
-    display: inline-block;
-    padding: 15px 30px;
-    font-size: 12px;
-    letter-spacing: 3px;
-    margin-top: 50px;
-    margin-bottom: 100px;
+  @media screen and (min-width: 650px) {
+    font-size: 40px;
+  }
+  p {
+    margin: 20px 0;
   }
 }
 

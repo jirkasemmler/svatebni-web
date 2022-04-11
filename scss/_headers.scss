@@ -3,13 +3,16 @@
 h1 {
   font-family: variables.$font-h1;
   text-transform: uppercase;
-  font-size: 80px;
+  font-size: 60px;
   font-weight: 300;
   margin: 0;
-  padding-top: 350px;
+  padding-top: 50px;
   color: variables.$main-bg;
   letter-spacing: 5px;
   font-style: normal;
+  @media screen and (min-width: 650px) {
+    font-size: 80px;
+  }
   &::after {
     content: url("/images/ornamen-18.svg");
     display: block;
@@ -53,6 +56,9 @@ h3 {
 }
 
 .story {
+  h2 {
+    padding-top: 40px;
+  }
   h2::after {
     content: "";
     background: url(/images/divider.svg);
