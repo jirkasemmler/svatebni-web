@@ -12,21 +12,25 @@
         display: flex;
         justify-content: space-around;
       }
-    }
-
-    .menu__item a {
-      color: variables.$special;
-      text-decoration: none;
-      font-family: variables.$font-btn;
-      font-style: normal;
-      text-transform: uppercase;
-      font-weight: bold;
-      font-size: 13px;
-      display: block;
-      text-align: center;
-      &:hover {
-        border: none;
+      &__link {
+        padding: 0;
+      }
+      &__item a {
+        color: variables.$special;
+        text-decoration: none;
+        font-family: variables.$font-btn;
+        font-style: normal;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 13px;
+        display: block;
+        text-align: center;
       }
     }
+  }
+  &__text {
+    font-size: 15px;
+    margin: 35px 0 5px 0;
+
   }
 }

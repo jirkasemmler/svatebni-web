@@ -20,6 +20,8 @@
     background-color: variables.$dark-bg;
     border-radius: 20px;
     margin-bottom: 20px;
+    position: relative;
+    text-align: center;
     @media screen and (min-width: 650px) {
       width: calc(50% - 30px);
       clear: both;
@@ -34,7 +36,6 @@
     &:nth-of-type(even) {
       @media screen and (min-width: 650px) {
         float: right;
-        text-align: left;
       }
       &::after {
         content: "";
@@ -59,7 +60,6 @@
     &:nth-of-type(odd) {
       @media screen and (min-width: 650px) {
         float: left;
-        text-align: right;
       }
       &::after {
         content: "";
