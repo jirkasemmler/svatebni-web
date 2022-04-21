@@ -460,22 +460,19 @@ iframe {
   z-index: -1;
   width: 100%;
   height: 350px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: bottom;
-     object-position: bottom;
+  object-fit: cover;
+  object-position: bottom;
   display: block;
 }
 @media screen and (min-width: 1000px) {
   .contacts__divider {
     height: 450px;
-    -o-object-position: center;
-       object-position: center;
+    object-position: center;
   }
 }
 @media screen and (min-width: 1400px) {
   .contacts__divider {
-    height: 650px;
+    height: 550px;
   }
 }
 
@@ -556,16 +553,18 @@ iframe {
   margin: 100px auto 0 auto;
 }
 
-.story {
+.home {
   padding-bottom: 100px;
   text-align: center;
 }
-.story p {
+.home p {
   max-width: 85%;
   margin: auto;
 }
 @media screen and (min-width: 1000px) {
-  .story p {
+  .home p {
     max-width: 60%;
   }
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */
