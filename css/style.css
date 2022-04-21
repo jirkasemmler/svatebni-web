@@ -1,7 +1,7 @@
 .hero {
   margin: 0;
   color: #ffffff;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(201, 117, 78, 0.3)), url(/images/K&J_091-Edit.jpg) center/cover;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(201, 117, 78, 0.3)), url(/images/main.jpg) center/cover;
 }
 
 .header {
