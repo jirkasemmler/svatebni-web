@@ -78,11 +78,17 @@ iframe {
 .contacts {
   &__box {
     width: 80%;
-    padding-bottom: 180px;
+    padding-bottom: 80px;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 50px;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1024px;
+    flex-direction: column;
+
+    @media screen and (min-width: 1000px) {
+      flex-direction: row;
+    }
+
   }
   &__gradient {
     background: linear-gradient(
@@ -113,6 +119,12 @@ iframe {
   &__foto {
     width: 100%;
     padding: 30px;
+
+  }
+
+  &__role {
+    font-size: 31px;
+    margin: 8px;
   }
 }
 
@@ -189,6 +201,7 @@ iframe {
 .home {
   padding-bottom: 100px;
   text-align: center;
+
   p {
     max-width: 85%;
     margin: auto;
@@ -196,6 +209,72 @@ iframe {
       max-width: 60%;
     }
   }
+}
+
+.hexagon {
+  position: relative;
+  height: 500px;
+  width: 500px;
+  background: rgb(209, 165, 69);
+  @media screen and (max-width: 1300px) {
+    height: 400px;
+    width: 400px;
+  }
+  @media screen and (max-width: 1000px) {
+    height: 350px;
+    width: 350px;
+  }
+  @media screen and (max-width: 800px) {
+    height: 320px;
+    width: 320px;
+  }
+  @media screen and (max-width: 600px) {
+    height: 250px;
+    width: 250px;
+  }
+}
+
+.hexagon:before, .double:after {
+  position: absolute;
+  content: '';
+}
+
+.hexagon:before {
+  top: 2px; /* border width */
+  left: 2px; /* border width */
+  height: calc(100% - 4px); /* 100% - (2 * border width) */
+  width: calc(100% - 4px); /* 100% - (2 * border width) */
+  background: white;
+}
+
+.hexagon, .hexagon:before, .double:after {
+  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.double:after {
+  top: 4px;
+  left: 4px;
+  height: calc(100% - 8px);
+  width: calc(100% - 8px);
+
+  background-size: cover !important;
+}
+
+.double_a:after {
+  background: url(/images/jirka7.png);
+
+}
+
+.double_b:after {
+  background: url(/images/jkulda.jpg);
+
+}
+
+
+.hexagon {
+  display: inline-block;
+  margin: 20px;
 }
 
 
