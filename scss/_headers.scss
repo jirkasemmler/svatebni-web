@@ -37,6 +37,9 @@ h2 {
     display: block;
     line-height: 20px;
   }
+  @media screen and (max-width: 400px) {
+    font-size: 36px;
+  }
   @media screen and (max-width: 350px) {
     font-size: 32px;
   }

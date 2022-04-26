@@ -349,6 +349,11 @@ h2::after {
   display: block;
   line-height: 20px;
 }
+@media screen and (max-width: 400px) {
+  h2 {
+    font-size: 36px;
+  }
+}
 @media screen and (max-width: 350px) {
   h2 {
     font-size: 32px;
